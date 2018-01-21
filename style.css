@@ -25,7 +25,7 @@ p {
   background-color: #ed145b;
   border: none; }
 
-.corebutton, .ourprices .ourpricesplan .ourpricesplanitem .itemconditionbotbtn, .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitembtn {
+.corebutton, .ourprices .ourpricesplan .ourpricesplanitem .itemconditionbotbtn, .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitembtn, .joincommunity .container .joincommunitybtndiv .joincommunitybtn {
   background-color: #ed145b;
   border: none;
   padding: 16px 65px;
@@ -36,7 +36,7 @@ p {
   color: #FFF;
   transition-duration: 0.75s;
   cursor: pointer; }
-  .corebutton:hover, .ourprices .ourpricesplan .ourpricesplanitem .itemconditionbotbtn:hover, .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitembtn:hover {
+  .corebutton:hover, .ourprices .ourpricesplan .ourpricesplanitem .itemconditionbotbtn:hover, .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitembtn:hover, .joincommunity .container .joincommunitybtndiv .joincommunitybtn:hover {
     transition-duration: 0.75s;
     background-color: #FFF;
     color: #ed145b; }
@@ -291,6 +291,71 @@ p {
         padding-bottom: 15px; }
         .additional .additionalbox .additionalboxtext p:first-child {
           color: #ed145b; }
+
+.joincommunity {
+  background-color: #ed145b;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+  .joincommunity .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; }
+    .joincommunity .container .joincommunitytext {
+      display: flex;
+      padding-right: 25px; }
+      .joincommunity .container .joincommunitytext h1 {
+        font-size: 38px;
+        display: flex;
+        flex-direction: row;
+        text-transform: uppercase;
+        color: #FFF; }
+        .joincommunity .container .joincommunitytext h1 div {
+          font-weight: 700; }
+    .joincommunity .container .joincommunitybtndiv {
+      display: flex; }
+      .joincommunity .container .joincommunitybtndiv .joincommunitybtn {
+        background-color: #FFF;
+        color: #ed145b; }
+
+.news .newsheader {
+  padding-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .news .newsheader p {
+    padding: 0 150px 0 150px;
+    text-align: center; }
+
+.download {
+  display: flex;
+  padding-bottom: 200px; }
+  .download .downloadimage {
+    display: flex;
+    flex: 1;
+    margin: 75px 75px 0 -100px; }
+    .download .downloadimage .downloadimagediv {
+      display: flex;
+      position: absolute; }
+      .download .downloadimage .downloadimagediv img {
+        width: 100%;
+        height: 100%; }
+  .download .downloadhead {
+    display: flex;
+    flex: 0.50; }
+    .download .downloadhead .downloadheader {
+      display: flex;
+      padding-top: 100px;
+      flex-direction: column; }
+      .download .downloadhead .downloadheader .downloadheaderbtn {
+        padding: 25px 0 25px 0; }
+      .download .downloadhead .downloadheader .line {
+        margin-left: 0; }
 
 .footer {
   background-color: #2b2b2b;
