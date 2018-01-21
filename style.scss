@@ -1,5 +1,6 @@
 $corepink: #ed145b;
 $coregrey: #a7a7a7;
+$darkgrey: #5a5a5a;
 $lightgreybg: #f4f4f4;
 
 .nodecorationahref {
@@ -29,20 +30,17 @@ $lightgreybg: #f4f4f4;
 	border: none;
 }
 
-.h1global {
-
-}
-
 .corebutton {
 	background-color: $corepink;
 	border: none;
-	padding: 16px 50px;
+	padding: 16px 65px;
 	border-radius: 25px;
 	font-size: 15px;
 	text-transform: uppercase;
 	font-weight: 700;
 	color: #FFF;
 	transition-duration: 0.75s;
+	cursor: pointer;
 
 	&:hover {
 		transition-duration: 0.75s;
@@ -234,6 +232,17 @@ $lightgreybg: #f4f4f4;
 			@extend .nodecorationahref;		
 			text-transform: uppercase;
 
+
+			&:hover {
+				color: $coregrey;
+				transition: 0.25s;
+				.fa {
+				border: 2px $corepink solid; 
+
+				}
+
+			}
+
 			.fa {
 				display: flex;
 				justify-content: center;
@@ -246,8 +255,8 @@ $lightgreybg: #f4f4f4;
     			border-radius: 50%;
     			text-align: center;
     			line-height: 100px;
-   
-    			
+				transition: 0.25s;     
+
 			}
 		}
 	}
@@ -264,14 +273,29 @@ $lightgreybg: #f4f4f4;
 }
 
 .carousel-content {
-    color: $coregrey;
-    font-size: 25px;
     display: flex;
     align-items: center;
     text-align: center;
+    flex-direction: column;
 
-    h1 {
-    	font-size: 52px;
+	.quote {
+		font-size: 52px;
+    	color: $corepink;
+	}
+
+	.quote1 {
+		@extend .quote;
+	}
+
+	.quote2 {
+		@extend .quote;
+		transform: rotate(180deg);
+	}
+
+    .quotetxt {
+    	color: $coregrey;
+    	font-size: 25px;
+
     }
 
 }
@@ -279,6 +303,104 @@ $lightgreybg: #f4f4f4;
 #text-carousel {
   	width: 100%;
   	height: auto;
-  	padding: 250px;
+  	padding: 150px;
+}
+
+.ourprices {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	.ourpricesheader {
+		padding: 150px 0 75px 0;
+		display: flex;
+	  	align-items: center;	
+		justify-content: center;
+		flex-direction: column;
+
+		p {
+			padding: 0 150px 0 150px;
+			text-align: center;
+		}
+	}
+
+	.ourpricesplan {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.ourpricesplanitem {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			flex-direction: column;
+			width: 250px;
+			height: 460px;
+			margin: 0 12px 0 12px;
+			background-color: #FFF;
+
+			&:hover {
+				.ourpricesplanitemtop {	
+					background-color: $corepink;
+					transition: 0.5s;
+				}
+			}
+
+			.itemconditionbotbtn {
+				@extend .corebutton;
+				pointer-events: none;
+
+			}
+
+			.ourpricesplanitembtn {
+				@extend .corebutton;
+				background-color: $lightgreybg;
+				color: $darkgrey;
+				pointer-events: none;
+				margin-top: -25px;
+			}
+
+			.ourpricesplanitemtop {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				background-color: $darkgrey;
+				transition: 0.5s;
+				width: 100%;
+				color: #FFF;
+
+				p {
+					font-size: 15px;
+					margin-top: -10px;
+					padding-bottom: 35px;
+				}
+
+				.ourpricesplanitemtopinside {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+
+					h1 {
+						font-size: 50px;
+					}
+
+					h2 {
+						font-size: 20px;
+						margin-bottom: -10px; 
+					}
+				}
+			}
+
+			.ourpricesplanitemcondition {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				padding: 30px 0 40px 0;
+
+			}
+		}
+	}
 }
 

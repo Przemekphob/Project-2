@@ -21,17 +21,18 @@
   background-color: #ed145b;
   border: none; }
 
-.corebutton {
+.corebutton, .ourprices .ourpricesplan .ourpricesplanitem .itemconditionbotbtn, .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitembtn {
   background-color: #ed145b;
   border: none;
-  padding: 16px 50px;
+  padding: 16px 65px;
   border-radius: 25px;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 700;
   color: #FFF;
-  transition-duration: 0.75s; }
-  .corebutton:hover {
+  transition-duration: 0.75s;
+  cursor: pointer; }
+  .corebutton:hover, .ourprices .ourpricesplan .ourpricesplanitem .itemconditionbotbtn:hover, .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitembtn:hover {
     transition-duration: 0.75s;
     background-color: #FFF;
     color: #ed145b; }
@@ -150,6 +151,11 @@
       flex-direction: column;
       color: #ed145b;
       text-transform: uppercase; }
+      .services .servicesicons .servicesiconsingle:hover {
+        color: #a7a7a7;
+        transition: 0.25s; }
+        .services .servicesicons .servicesiconsingle:hover .fa {
+          border: 2px #ed145b solid; }
       .services .servicesicons .servicesiconsingle .fa {
         display: flex;
         justify-content: center;
@@ -161,7 +167,8 @@
         height: 130px;
         border-radius: 50%;
         text-align: center;
-        line-height: 100px; }
+        line-height: 100px;
+        transition: 0.25s; }
 
 .carousel {
   background-image: url("carouselbg.png");
@@ -171,17 +178,87 @@
   position: relative; }
 
 .carousel-content {
-  color: #a7a7a7;
-  font-size: 25px;
   display: flex;
   align-items: center;
-  text-align: center; }
-  .carousel-content h1 {
-    font-size: 52px; }
+  text-align: center;
+  flex-direction: column; }
+  .carousel-content .quote, .carousel-content .quote1, .carousel-content .quote2 {
+    font-size: 52px;
+    color: #ed145b; }
+  .carousel-content .quote2 {
+    transform: rotate(180deg); }
+  .carousel-content .quotetxt {
+    color: #a7a7a7;
+    font-size: 25px; }
 
 #text-carousel {
   width: 100%;
   height: auto;
-  padding: 250px; }
+  padding: 150px; }
+
+.ourprices {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .ourprices .ourpricesheader {
+    padding: 150px 0 75px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .ourprices .ourpricesheader p {
+      padding: 0 150px 0 150px;
+      text-align: center; }
+  .ourprices .ourpricesplan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .ourprices .ourpricesplan .ourpricesplanitem {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      width: 250px;
+      height: 460px;
+      margin: 0 12px 0 12px;
+      background-color: #FFF; }
+      .ourprices .ourpricesplan .ourpricesplanitem:hover .ourpricesplanitemtop {
+        background-color: #ed145b;
+        transition: 0.5s; }
+      .ourprices .ourpricesplan .ourpricesplanitem .itemconditionbotbtn {
+        pointer-events: none; }
+      .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitembtn {
+        background-color: #f4f4f4;
+        color: #5a5a5a;
+        pointer-events: none;
+        margin-top: -25px; }
+      .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitemtop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #5a5a5a;
+        transition: 0.5s;
+        width: 100%;
+        color: #FFF; }
+        .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitemtop p {
+          font-size: 15px;
+          margin-top: -10px;
+          padding-bottom: 35px; }
+        .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitemtop .ourpricesplanitemtopinside {
+          display: flex;
+          flex-direction: row;
+          align-items: center; }
+          .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitemtop .ourpricesplanitemtopinside h1 {
+            font-size: 50px; }
+          .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitemtop .ourpricesplanitemtopinside h2 {
+            font-size: 20px;
+            margin-bottom: -10px; }
+      .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitemcondition {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 0 40px 0; }
 
 /*# sourceMappingURL=style.css.map */
