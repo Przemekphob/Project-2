@@ -1,9 +1,13 @@
-.nodecorationahref, .navi .navimenu ul li a, #mcbook .mcbook .mcbookhead .mcbookheader .video, .services .servicesicons .servicesiconsingle {
+.nodecorationahref, .navi .navimenu ul li a, #mcbook .mcbook .mcbookhead .mcbookheader .video, .services .servicesicons .servicesiconsingle, .footer .footercontainer .footerdivright .symu {
   text-decoration: none;
   color: #FFF;
   font-weight: bold;
   font-size: 15px;
   transition-duration: 0.75s; }
+
+p {
+  margin: 0;
+  padding: 0; }
 
 .lightgreybg {
   width: 100%;
@@ -58,7 +62,7 @@
 
 .jumbotron {
   background-image: url("headerpicture.jpg");
-  width: 100%;
+  background-position: center;
   background-size: cover;
   position: relative;
   z-index: 3; }
@@ -108,6 +112,7 @@
         #mcbook .mcbook .mcbookhead .mcbookheader .line {
           margin-left: 0; }
         #mcbook .mcbook .mcbookhead .mcbookheader .video {
+          padding-top: 25px;
           display: inline-flex;
           align-items: center;
           color: #ed145b; }
@@ -172,8 +177,7 @@
 
 .carousel {
   background-image: url("carouselbg.png");
-  width: 100%;
-  height: 100%;
+  background-position: center;
   background-size: cover;
   position: relative; }
 
@@ -193,8 +197,7 @@
 
 #text-carousel {
   width: 100%;
-  height: auto;
-  padding: 150px; }
+  padding: 75px; }
 
 .ourprices {
   display: flex;
@@ -212,7 +215,8 @@
   .ourprices .ourpricesplan {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
     .ourprices .ourpricesplan .ourpricesplanitem {
       display: flex;
       justify-content: flex-start;
@@ -260,5 +264,61 @@
         align-items: center;
         flex-direction: column;
         padding: 30px 0 40px 0; }
+        .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitemcondition p {
+          padding: 7px 0 7px 0; }
+
+.additional {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 75px; }
+  .additional .additionalbox {
+    display: flex;
+    padding: 45px 15px 45px 15px;
+    max-width: 360px; }
+    .additional .additionalbox .additionalboxicon {
+      display: flex;
+      align-items: flex-start; }
+      .additional .additionalbox .additionalboxicon .fa {
+        font-size: 60px;
+        color: #ed145b;
+        padding-right: 25px; }
+    .additional .additionalbox .additionalboxtext {
+      display: flex;
+      flex-direction: column; }
+      .additional .additionalbox .additionalboxtext p {
+        font-size: 15px;
+        padding-bottom: 15px; }
+        .additional .additionalbox .additionalboxtext p:first-child {
+          color: #ed145b; }
+
+.footer {
+  background-color: #2b2b2b;
+  width: 100%; }
+  .footer .footercontainer {
+    padding-bottom: 60px;
+    padding-top: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF; }
+    .footer .footercontainer .footerdivleft {
+      display: flex;
+      justify-content: flex-start;
+      flex: 1;
+      font-size: 15px; }
+    .footer .footercontainer .footerdivright {
+      display: flex;
+      justify-content: flex-end;
+      align-self: center;
+      align-items: center;
+      flex: 1;
+      font-size: 16px; }
+      .footer .footercontainer .footerdivright .symu {
+        padding-left: 10px; }
+      .footer .footercontainer .footerdivright .pinkdot {
+        color: #ed145b;
+        font-size: 25px; }
 
 /*# sourceMappingURL=style.css.map */
