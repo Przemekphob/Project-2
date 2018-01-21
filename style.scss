@@ -29,6 +29,10 @@ $lightgreybg: #f4f4f4;
 	border: none;
 }
 
+.h1global {
+
+}
+
 .corebutton {
 	background-color: $corepink;
 	border: none;
@@ -90,7 +94,7 @@ $lightgreybg: #f4f4f4;
 	width: 100%;
 	background-size: cover;
 	position: relative;
-	z-index: 1;
+	z-index: 3;
 
 }
 
@@ -127,65 +131,154 @@ $lightgreybg: #f4f4f4;
 }
 
 
-
-.pinkline {
-	width: 100%;
-	height: 25px;
-	background-color: $corepink;
-	transform: skewY(-0.50deg);
+#mcbook {
 	position: relative;
-	top: -45px;
-	z-index: 0;
-}
+	z-index: 1;
 
-.mcbook {
-	display: flex;
+	&:before {
+		content: "";
+		width: 100%;
+		height: 25px;
+		background-color: $corepink;
+		transform: skewY(-0.50deg);
+		position: absolute;
+		top: 10px;
+		z-index: 0;		
+	}
 
-	.mcbookhead {
+	.mcbook {
 		display: flex;
-		flex: 0.75;
 
-
-		.mcbookheader {
-
+		.mcbookhead {
 			display: flex;
-			padding-top: 100px;
-			display: flex;
-			flex-direction: column;
+			flex: 0.75;
 
-			.line {
-				margin-left: 0;
-			}
 
-			.video {
-				display: inline-flex;
-				align-items: center;
-				color: $corepink;
-				@extend .nodecorationahref;
+			.mcbookheader {
 
-				.fa-play-circle-o {
-					font-size: 27px;
+				display: flex;
+				padding-top: 100px;
+				display: flex;
+				flex-direction: column;
 
+				.line {
+					margin-left: 0;
+				}
+
+				.video {
+					display: inline-flex;
+					align-items: center;
+					color: $corepink;
+					@extend .nodecorationahref;
+
+					.fa-play-circle-o {
+						padding-left: 20px;
+						font-size: 27px;
+
+					}
 				}
 			}
 		}
-	}
 
-	.mcbookimage {
-		display: flex;
-		flex: 1;
-		padding-top: 75px;
-
-		.imagediv {
+		.mcbookimage {
 			display: flex;
-			position: absolute;
+			flex: 1;
+			margin: 100px 40px 0 40px;
 
-			img {
-				width: 100%;
-				height: 100%;
+			.imagediv {
+				display: flex;
+				position: absolute;
+
+				img {
+					width: 100%;
+					height: 100%;
+
+				}
 
 			}
-
 		}
 	}
 }
+
+.services {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	.servicesheader {
+		padding-top: 150px;
+		display: flex;
+	  	align-items: center;	
+		justify-content: center;
+		flex-direction: column;
+
+		p {
+			padding: 0 150px 0 150px;
+			text-align: center;
+		}
+	}
+
+	.servicesicons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 75px;
+
+		.servicesiconsingle {
+			display: flex;
+			flex: 1;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			color: $corepink;
+			@extend .nodecorationahref;		
+			text-transform: uppercase;
+
+			.fa {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 50px;
+				background: none;
+				border: 2px $coregrey solid; 
+    			width: 130px;
+    			height: 130px;
+    			border-radius: 50%;
+    			text-align: center;
+    			line-height: 100px;
+   
+    			
+			}
+		}
+	}
+
+}
+
+.carousel {
+	background-image: url('carouselbg.png');
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	position: relative;
+
+}
+
+.carousel-content {
+    color: $coregrey;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+    	font-size: 52px;
+    }
+
+}
+
+#text-carousel {
+  	width: 100%;
+  	height: auto;
+  	padding: 250px;
+}
+
