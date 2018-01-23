@@ -19,7 +19,7 @@ $lightred: #eb304d;
 	font-weight: 700;
 }
 
-p {
+p, ul, ol,  li {
 	margin: 0;
     padding: 0;
     line-height: 150%;
@@ -27,6 +27,8 @@ p {
 
 h1, h2, h3 {
 	font-weight: 900;
+	margin: 0;
+    padding: 0;
 }
 
 .lightgreybg {
@@ -36,7 +38,6 @@ h1, h2, h3 {
 }
 
 .container {
-	width: 1170px;
 	padding: 0 16px 100px 16px;
 	color: $coregrey;
 }
@@ -77,13 +78,14 @@ h1, h2, h3 {
 	z-index: 3;
 
 	.navi {
-  	display: flex;
-  	justify-content: space-between;
-	align-items: center;
-	min-width: 100%;
+	  	display: flex;
+	  	justify-content: space-between;
+		align-items: center;
+		min-width: 100%;
 
 		.navihead {
-
+	  		display: flex;		
+			align-self: center;
 			h3 {
 				display: inline-flex;
 				color: #FFF;
@@ -94,14 +96,16 @@ h1, h2, h3 {
 		}
 	  	
 		.navimenu {
+	
 		  	ul {
 				padding: 0;
 				list-style-type: none;
 			  	display: flex;
 				li {
-
+					
 					a {
-						padding: 0 10px;
+						padding: 0 15px;
+						font-size: 16px;
 						&:hover {
 							color: $corepink;
 						}
@@ -172,7 +176,6 @@ h1, h2, h3 {
 
 				display: flex;
 				padding-top: 100px;
-				display: flex;
 				flex-direction: column;
 
 				.line {
@@ -249,15 +252,13 @@ h1, h2, h3 {
 			@extend .nodecorationahref;		
 			text-transform: uppercase;
 
-
-			&:hover {
-				color: $coregrey;
-				transition: 0.25s;
-				.fa {
-				border: 2px $corepink solid; 
-
-				}
-
+			a {
+				color: $corepink;
+				text-decoration: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
 			}
 
 			.fa {
@@ -320,7 +321,6 @@ h1, h2, h3 {
 
 #text-carousel {
   	width: 100%;
-  	
   	padding: 75px;
 }
 
@@ -353,6 +353,7 @@ h1, h2, h3 {
 			justify-content: flex-start;
 			align-items: center;
 			flex-direction: column;
+			flex-wrap: wrap;
 			width: 250px;
 			height: 460px;
 			margin: 0 12px 0 12px;
@@ -559,27 +560,27 @@ h1, h2, h3 {
 				overflow: hidden;
 
 				&:after {
-    				content:'';
+    				content: '';
     				width: 0;
 					height: 0;
-    				left:50%;
-    				bottom:0;					
+    				left: 50%;
+    				bottom: 0;					
 					border-style: solid;
 					border-width: 25px 0 0 360px;
 					border-color: transparent transparent transparent $corepink;
-				    position:absolute;
-				    transform:translatex(-50%);
+				    position: absolute;
+				    transform: translatex(-50%);
 				}
 
 				&:hover {
 					&:after {
-						opacity: .9;
+						opacity: 0;
 					}
 
 					.layer {
 						margin-bottom: 0;
 						cursor: pointer;
-						opacity: .9;
+						opacity: 0.9;
 					}
 				}
 
@@ -591,7 +592,7 @@ h1, h2, h3 {
 					left: 0;
 					margin-bottom: -300px;
 					background-color: $corepink;
-					transition: all 0.7s ease;
+					transition: all 0.6s ease;
 					display: flex;
 					justify-content: center;
 					align-items: center;
@@ -669,11 +670,10 @@ h1, h2, h3 {
 		flex: 1;
 		margin: 0;
 		padding: 100px 25px 25px 0;
-
+		margin-left: -40px;
 		.downloadimagediv {
 			display: flex;
 			
-
 			img {
 				
 				width: 100%;
@@ -802,3 +802,636 @@ h1, h2, h3 {
 		}
 	}
 }
+
+@media(min-width: 992px) and (max-width: 1199px) {
+
+	.container {
+		padding: 0 10px 60px 10px;
+	}
+
+	.corebutton {
+		&:hover {
+			background-color: $corepink;
+			color: #FFF;
+		}		
+	}
+
+	.jumbotron {
+		.navi {
+			.navihead {
+				h3 {
+					font-size: 30px;
+				}
+			}
+			.navimenu {
+				ul {
+					li {
+						a {
+							padding: 0 15px;
+							font-size: 30px;
+							color: $corepink;
+							&:hover {
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#mcbook {
+		.mcbook {
+			.mcbookhead {
+				display: flex;
+				flex: 0.65;
+				.mcbookheader {
+					padding-top: 75px;
+					align-items: center;
+				}
+			}
+			.mcbookimage {
+				display: flex;
+				flex: 1;
+				margin: 150px 40px 0 40px;
+			}
+		}
+	}
+
+	.services {
+		.servicesheader {
+			padding-top: 50px;
+			p {
+				padding: 0 150px 0 150px;
+				text-align: center;
+			}
+		}
+		.servicesicons {
+			display: flex;
+			flex-wrap: wrap;
+			padding-top: 50px;
+		}
+	}	
+
+	.ourprices {
+		.ourpricesplan {
+			.ourpricesplanitem {
+				width: 250px;
+				height: 460px;
+				margin: 0 100px 50px 100px;
+				background-color: #FFF;
+				.ourpricesplanitemtop {		
+					background-color: $corepink;
+				}	
+				&:hover {
+					
+				}
+			}
+		}
+	}
+
+	.news {
+		.newsimg {
+			.newsimgbox {
+				padding: 30px 15px 30px 15px;
+				.newsimgboxgallery {
+					position: relative;
+					overflow: hidden;
+					&:after {
+	    				border: none;
+					}
+					.layer {
+						margin-bottom: 0;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+ 	}
+
+	.joincommunity {
+		.container {
+			.joincommunitytext {
+				h1 {
+					font-size: 28px;
+				}
+			}
+			.joincommunitybtndiv {
+				.joincommunitybtn {
+					&:hover {
+						background-color: #FFF;
+						color: $corepink;
+					}	
+				}
+			}			
+		}	
+	}
+
+	.download {
+		padding-bottom: 50px;
+		.downloadimage {
+			padding: 175px 25px 25px 0;
+			margin-left: 0;
+		}
+	}
+
+	.footer {
+		.footercontainer {
+			padding-bottom: 45px;
+			padding-top: 45px;
+			.footerdivleft {
+				justify-content: center;
+			}
+			.footerdivright {
+				justify-content: center;
+			}
+		}
+	}
+}
+
+
+@media(min-width: 768px) and (max-width: 991px)  {
+	.container {
+		padding: 0 10px 50px 10px;
+		font-size: 18px;
+	}
+
+	.corebutton {
+		&:hover {
+			background-color: $corepink;
+			color: #FFF;
+		}		
+	}
+
+	.jumbotron {
+		.navi {
+			display: flex;
+			flex-direction: column;
+			.navihead {
+				h3 {
+					font-size: 40px;
+				}
+			}
+			.navimenu {
+				padding-top: 25px;
+				ul {
+					li {
+						a {
+							padding: 0 15px;
+							font-size: 30px;
+							color: $corepink;
+							&:hover {
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#mcbook {
+
+		.mcbook {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.mcbookhead {
+				display: flex;
+				flex: 0.65;
+				.mcbookheader {
+					padding-top: 75px;
+					align-items: center;
+					.line {
+						margin: 25px 0 25px 0;
+					}
+				}
+			}
+			.mcbookimage {
+
+				flex: 0.75;
+				margin: 10px 40px 0 40px;
+
+				.imagediv {
+					position: relative;
+					}
+			}
+		}
+	}
+
+	.services {
+		.servicesheader {
+			padding-top: 50px;
+			p {
+				padding: 0 100px 0 100px;
+				text-align: center;
+			}
+		}
+		.servicesicons {
+			display: flex;
+			flex-wrap: wrap;
+			padding-top: 50px;
+			
+			.servicesiconsingle {
+				padding: 30px 90px 0 90px;
+			}
+		}
+	}	
+
+	#text-carousel {
+	  	padding: 25px;
+	}
+
+	.ourprices {
+		.ourpricesplan {
+			.ourpricesplanitem {
+				width: 250px;
+				height: 460px;
+				margin: 0 50px 50px 50px;
+				background-color: #FFF;
+				.ourpricesplanitemtop {		
+					background-color: $corepink;
+				}	
+				&:hover {
+					
+				}
+			}
+		}
+	}
+
+	.news {
+		.newsimg {
+			.newsimgbox {
+				padding: 30px 15px 30px 15px;
+				.newsimgboxgallery {
+					position: relative;
+					overflow: hidden;
+					&:after {
+	    				border: none;
+					}
+					.layer {
+						margin-bottom: 0;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+		.newsheader {
+			padding-top: 75px;
+		}
+ 	}
+
+	.joincommunity {
+		.container {
+			display: flex;
+			flex-direction: column;
+			.joincommunitytext {
+
+				h1 {
+					font-size: 28px;
+					padding-bottom: 40px;
+				}
+			}
+			.joincommunitybtndiv {
+				.joincommunitybtn {
+					&:hover {
+						background-color: #FFF;
+						color: $corepink;
+					}	
+				}
+			}
+		}	
+	}
+
+	.download {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.downloadimage {
+			padding: 75px 0 0 0;
+			margin-left: 0;
+		}
+
+		.downloadhead {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.downloadheader {
+				justify-content: center;
+				align-items: center;				
+				display: flex;
+				padding-top: 25px;
+				flex-direction: column;
+
+				.downloadheaderbtn {
+					padding: 25px 0 25px 0;
+				}
+				.line {
+					margin: 0;
+				}
+				h1 {
+					padding-bottom: 30px;
+				}
+				p {
+					padding-top: 30px;
+				}
+
+			}
+		}		
+	}
+
+	.additional2 {
+		.container {
+			.additional2header {
+				padding-top: 50px;
+			
+				p {
+					padding: 0 100px 25px 100px;
+				}
+			}
+		}
+	}
+
+	.footer {
+		.footercontainer {
+			padding-bottom: 45px;
+			padding-top: 45px;
+			.footerdivleft {
+				justify-content: center;
+			}
+			.footerdivright {
+				justify-content: center;
+			}
+		}
+	}	
+
+}
+
+
+@media(max-width: 767px) {
+	.container {
+		
+		padding: 0 3px 20px 3px;
+	}
+
+	.corebutton {
+		&:hover {
+			background-color: $corepink;
+			color: #FFF;
+		}		
+	}
+
+	.jumbotron {
+		.navi {
+			display: flex;
+			flex-direction: column;
+			.navihead {
+				h3 {
+					font-size: 50px;
+				}
+			}
+			.navimenu {
+
+				padding-top: 20px;
+				ul {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					li {
+						padding: 15px 15px;
+						a {
+							font-size: 40px;
+							color: $corepink;
+							&:hover {
+								
+							}
+						}
+					}
+				}
+			}
+		}
+		.hero {
+			.herohead {	
+				h1 {
+					text-transform: uppercase;
+					font-size: 35px;
+				}
+			}
+
+
+			.herobutton {
+				padding-top: 25px; 
+			}
+		}
+	}
+
+	#mcbook {
+
+		.mcbook {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.mcbookhead {
+				display: flex;
+				flex: 0.65;
+				.mcbookheader {
+					padding-top: 75px;
+					display: flex;
+					align-items: center;
+					text-align: center;
+					justify-content: center;
+					.line {
+						margin: 25px 0 25px 0;
+					}
+				}
+			}
+			.mcbookimage {
+
+				flex: 0.75;
+				margin: 10px 40px 0 40px;
+
+				.imagediv {
+					position: relative;
+					}
+			}
+		}
+	}
+
+	.services {
+		.servicesheader {
+			padding-top: 50px;
+			p {
+				padding: 0 100px 0 100px;
+				text-align: center;
+			}
+		}
+		.servicesicons {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			padding-top: 50px;
+			
+			.servicesiconsingle {
+				padding: 30px 90px 0 90px;
+			}
+		}
+	}	
+
+	#text-carousel {
+	  	padding: 0;
+	}
+
+	.ourprices {
+		.ourpricesplan {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			.ourpricesplanitem {
+				width: 250px;
+				height: 460px;
+				margin: 0 0 25px 0;
+				background-color: #FFF;
+				.ourpricesplanitemtop {		
+					background-color: $corepink;
+				}	
+				&:hover {
+					
+				}
+			}
+		}
+	}
+
+	.additional {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 25px;
+	}
+
+	.news {
+		.newsimg {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			flex-direction: column;
+			.newsimgbox {
+				padding: 20px 15px 20px 15px;
+				.newsimgboxgallery {
+					position: relative;
+					overflow: hidden;
+					&:after {
+	    				border: none;
+					}
+					.layer {
+						margin-bottom: 0;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+		.newsheader {
+			padding-top: 50px;
+		}
+ 	}
+
+	.joincommunity {
+		.container {
+			display: flex;
+			flex-direction: column;
+			.joincommunitytext {
+
+				h1 {
+					font-size: 20px;
+					padding-bottom: 40px;
+				}
+			}
+			.joincommunitybtndiv {
+				.joincommunitybtn {
+					&:hover {
+						background-color: #FFF;
+						color: $corepink;
+					}	
+				}
+			}
+		}	
+	}
+
+
+	.download {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.downloadimage {
+			padding: 75px 0 0 0;
+			margin-left: 0;
+		}
+
+		.downloadhead {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.downloadheader {
+				justify-content: center;
+				align-items: center;				
+				display: flex;
+				padding-top: 25px;
+				flex-direction: column;
+				text-align: center;
+
+				.downloadheaderbtn {
+					padding: 25px 0 25px 0;
+				}
+				.line {
+					margin: 0;
+				}
+				h1 {
+					padding-bottom: 30px;
+				}
+				p {
+					padding-top: 30px;
+				}
+
+			}
+		}		
+	}
+
+	.additional2 {
+		.container {
+			.additional2header {
+				padding-top: 25px;
+			
+				p {
+					padding: 0 25px 25px 25px;
+				}
+			}
+		}
+	}
+
+	.footer {
+		.footercontainer {
+			padding-bottom: 45px;
+			padding-top: 45px;
+			.footerdivleft {
+				justify-content: center;
+			}
+			.footerdivright {
+				justify-content: center;
+			}
+		}
+	}	
+
+}
+
+
