@@ -192,7 +192,8 @@ h1, h2, h3 {
   background-image: url("carouselbg.png");
   background-position: center;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  width: 100%; }
 
 .carousel-content {
   display: flex;
@@ -470,7 +471,7 @@ h1, h2, h3 {
     justify-content: center;
     align-content: center;
     position: relative;
-    width: 1200px;
+    width: 1160px;
     height: 640px;
     background-color: #FFF; }
     .modal-dialog .modal-content .modalbg .modalimg {
@@ -595,6 +596,27 @@ h1, h2, h3 {
       padding: 175px 25px 25px 0;
       margin-left: 0; }
 
+  .modal-dialog {
+    padding-top: 25%; }
+    .modal-dialog .modal-content .modalbg {
+      width: 900px;
+      height: 480px; }
+      .modal-dialog .modal-content .modalbg .modalimg {
+        position: absolute;
+        margin-top: -225px; }
+      .modal-dialog .modal-content .modalbg .modaltxt {
+        padding-top: 100px; }
+        .modal-dialog .modal-content .modalbg .modaltxt h1 {
+          color: #db2e44;
+          font-size: 48px; }
+        .modal-dialog .modal-content .modalbg .modaltxt p {
+          font-size: 24px;
+          padding-bottom: 25px; }
+        .modal-dialog .modal-content .modalbg .modaltxt .modalbtn {
+          width: 250px;
+          height: 70px;
+          font-size: 24px; }
+
   .footer .footercontainer {
     padding-bottom: 45px;
     padding-top: 45px; }
@@ -656,6 +678,14 @@ h1, h2, h3 {
 
   #text-carousel {
     padding: 25px; }
+
+  .carousel-content {
+    width: 100%;
+    padding: 10px; }
+    .carousel-content .quotetxt {
+      font-size: 16px; }
+    .carousel-content .quote, .carousel-content .quote1, .carousel-content .quote2 {
+      font-size: 32px; }
 
   .ourprices .ourpricesplan .ourpricesplanitem {
     width: 250px;
@@ -720,6 +750,35 @@ h1, h2, h3 {
     .additional2 .container .additional2header p {
       padding: 0 100px 25px 100px; }
 
+  .modal-dialog {
+    padding-top: 25%; }
+    .modal-dialog .modal-content .modalbg {
+      width: 740px;
+      height: 340px; }
+      .modal-dialog .modal-content .modalbg .modalimg {
+        position: absolute;
+        margin-top: -225px; }
+      .modal-dialog .modal-content .modalbg .modaltxt {
+        padding-top: 175px; }
+        .modal-dialog .modal-content .modalbg .modaltxt h1 {
+          font-size: 36px;
+          padding-bottom: 0; }
+        .modal-dialog .modal-content .modalbg .modaltxt p {
+          font-size: 20px;
+          display: flex;
+          align-self: center;
+          padding-bottom: 10px;
+          padding-top: 0; }
+        .modal-dialog .modal-content .modalbg .modaltxt .modalbtn {
+          width: 200px;
+          height: 50px;
+          border-radius: 2%;
+          font-size: 20px;
+          color: #FFF;
+          background-color: #eb304d;
+          border: none;
+          align-self: center; }
+
   .footer .footercontainer {
     padding-bottom: 45px;
     padding-top: 45px; }
@@ -752,9 +811,15 @@ h1, h2, h3 {
           .jumbotron .navi .navimenu ul li a {
             font-size: 40px;
             color: #ed145b; }
-  .jumbotron .hero .herohead h1 {
-    text-transform: uppercase;
-    font-size: 35px; }
+  .jumbotron .hero .herohead {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column; }
+    .jumbotron .hero .herohead h1 {
+      text-transform: uppercase;
+      font-size: 30px; }
   .jumbotron .hero .herobutton {
     padding-top: 25px; }
 
@@ -783,7 +848,7 @@ h1, h2, h3 {
   .services .servicesheader {
     padding-top: 50px; }
     .services .servicesheader p {
-      padding: 0 100px 0 100px;
+      padding: 0;
       text-align: center; }
   .services .servicesicons {
     display: flex;
@@ -793,9 +858,10 @@ h1, h2, h3 {
     .services .servicesicons .servicesiconsingle {
       padding: 30px 90px 0 90px; }
 
-  #text-carousel {
-    padding: 0; }
-
+  .ourprices .ourpricesheader {
+    padding: 75px 0 0 0; }
+    .ourprices .ourpricesheader p {
+      padding: 0 0 25px 0; }
   .ourprices .ourpricesplan {
     display: flex;
     align-items: center;
@@ -808,6 +874,17 @@ h1, h2, h3 {
       background-color: #FFF; }
       .ourprices .ourpricesplan .ourpricesplanitem .ourpricesplanitemtop {
         background-color: #ed145b; }
+
+  #text-carousel {
+    padding: 0; }
+
+  .carousel-content {
+    width: 100%;
+    padding: 0; }
+    .carousel-content .quotetxt {
+      font-size: 14px; }
+    .carousel-content .quote, .carousel-content .quote1, .carousel-content .quote2 {
+      font-size: 28px; }
 
   .additional {
     display: flex;
@@ -834,12 +911,14 @@ h1, h2, h3 {
           background-color: transparent; }
   .news .newsheader {
     padding-top: 50px; }
+    .news .newsheader p {
+      padding: 0; }
 
   .joincommunity .container {
     display: flex;
     flex-direction: column; }
     .joincommunity .container .joincommunitytext h1 {
-      font-size: 20px;
+      font-size: 14px;
       padding-bottom: 40px; }
     .joincommunity .container .joincommunitybtndiv .joincommunitybtn:hover {
       background-color: #FFF;
@@ -875,12 +954,51 @@ h1, h2, h3 {
 
   .additional2 .container .additional2header {
     padding-top: 25px; }
+    .additional2 .container .additional2header h1 {
+      font-size: 26px; }
     .additional2 .container .additional2header p {
       padding: 0 25px 25px 25px; }
 
+  .modal-dialog {
+    padding-top: 40%; }
+    .modal-dialog .modal-content .modalbg {
+      width: 400px;
+      height: 340px; }
+      .modal-dialog .modal-content .modalbg .modalimg {
+        top: 10%;
+        position: absolute;
+        margin-top: -150px; }
+        .modal-dialog .modal-content .modalbg .modalimg img {
+          width: 80%;
+          height: 80%; }
+      .modal-dialog .modal-content .modalbg .modaltxt {
+        padding-top: 175px; }
+        .modal-dialog .modal-content .modalbg .modaltxt h1 {
+          font-size: 28px;
+          padding-bottom: 0; }
+        .modal-dialog .modal-content .modalbg .modaltxt p {
+          font-size: 16px;
+          display: flex;
+          align-self: center;
+          padding-bottom: 10px;
+          padding-top: 0; }
+        .modal-dialog .modal-content .modalbg .modaltxt .modalbtn {
+          width: 175px;
+          height: 40px;
+          border-radius: 2%;
+          font-size: 18px;
+          color: #FFF;
+          background-color: #eb304d;
+          border: none;
+          align-self: center; }
+
   .footer .footercontainer {
     padding-bottom: 45px;
-    padding-top: 45px; }
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
     .footer .footercontainer .footerdivleft {
       justify-content: center; }
     .footer .footercontainer .footerdivright {

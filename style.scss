@@ -286,6 +286,7 @@ h1, h2, h3 {
 	background-position: center;
 	background-size: cover;
 	position: relative;
+	width: 100%;
 
 }
 
@@ -719,7 +720,7 @@ h1, h2, h3 {
 			justify-content: center;
 			align-content: center;
 			position: relative;
-			width: 1200px;
+			width: 1160px;
 			height: 640px;
 			background-color: #FFF;
 
@@ -858,6 +859,8 @@ h1, h2, h3 {
 		}
 	}
 
+
+
 	.services {
 		.servicesheader {
 			padding-top: 50px;
@@ -932,6 +935,39 @@ h1, h2, h3 {
 		.downloadimage {
 			padding: 175px 25px 25px 0;
 			margin-left: 0;
+		}
+	}
+
+	.modal-dialog {
+		padding-top: 25%;
+		.modal-content {
+			.modalbg {
+				width: 900px;
+				height: 480px;
+				.modalimg {
+					position: absolute;
+					margin-top: -225px;
+				}
+
+				.modaltxt {
+					padding-top: 100px;
+					h1 {
+						color: $darkred;
+						font-size: 48px;
+					}	
+
+					p {
+						font-size: 24px;
+						padding-bottom: 25px;
+					}
+
+					.modalbtn {
+						width: 250px;
+						height: 70px;
+						font-size: 24px;
+					}
+				}
+			}
 		}
 	}
 
@@ -1041,6 +1077,18 @@ h1, h2, h3 {
 
 	#text-carousel {
 	  	padding: 25px;
+	}
+
+	.carousel-content {
+	  	width: 100%;
+	  	padding: 10px;
+	  	.quotetxt {
+			font-size: 16px;
+	  	}
+	  		.quote {
+		font-size: 32px;
+	}
+
 	}
 
 	.ourprices {
@@ -1156,6 +1204,47 @@ h1, h2, h3 {
 		}
 	}
 
+	.modal-dialog {
+		padding-top: 25%;
+		.modal-content {
+			.modalbg {
+				width: 740px;
+				height: 340px;
+				.modalimg {
+					position: absolute;
+					margin-top: -225px;
+				}
+
+				.modaltxt {
+					padding-top: 175px;
+					h1 {
+						font-size: 36px;
+						padding-bottom: 0;
+					}	
+
+					p {
+						font-size: 20px;
+						display: flex;
+						align-self: center;
+						padding-bottom: 10px;
+						padding-top: 0;
+					}
+
+					.modalbtn {
+						width: 200px;
+						height: 50px;
+						border-radius: 2%;
+						font-size: 20px;
+						color: #FFF;
+						background-color: $lightred;
+						border: none;
+						align-self: center;
+					}
+				}
+			}
+		}
+	}
+
 	.footer {
 		.footercontainer {
 			padding-bottom: 45px;
@@ -1217,9 +1306,14 @@ h1, h2, h3 {
 		}
 		.hero {
 			.herohead {	
+				display: flex;
+				justify-content: center;
+				text-align: center;
+				align-items: center;
+				flex-direction: column;
 				h1 {
 					text-transform: uppercase;
-					font-size: 35px;
+					font-size: 30px;
 				}
 			}
 
@@ -1267,7 +1361,7 @@ h1, h2, h3 {
 		.servicesheader {
 			padding-top: 50px;
 			p {
-				padding: 0 100px 0 100px;
+				padding: 0;
 				text-align: center;
 			}
 		}
@@ -1283,11 +1377,14 @@ h1, h2, h3 {
 		}
 	}	
 
-	#text-carousel {
-	  	padding: 0;
-	}
 
 	.ourprices {
+		.ourpricesheader {
+			padding: 75px 0 0 0;
+			p {
+				padding: 0 0 25px 0;
+			}
+		}
 		.ourpricesplan {
 			display: flex;
 			align-items: center;
@@ -1307,6 +1404,24 @@ h1, h2, h3 {
 			}
 		}
 	}
+
+	#text-carousel {
+	  	padding: 0;
+	}
+
+	.carousel-content {
+	  	width: 100%;
+	  	padding: 0;
+	  	.quotetxt {
+			font-size: 14px;
+	  	}
+	  		.quote {
+		font-size: 28px;
+	}
+
+	}
+
+
 
 	.additional {
 		display: flex;
@@ -1340,6 +1455,9 @@ h1, h2, h3 {
 		}
 		.newsheader {
 			padding-top: 50px;
+			p {
+				padding: 0;
+			}
 		}
  	}
 
@@ -1350,7 +1468,7 @@ h1, h2, h3 {
 			.joincommunitytext {
 
 				h1 {
-					font-size: 20px;
+					font-size: 14px;
 					padding-bottom: 40px;
 				}
 			}
@@ -1411,9 +1529,59 @@ h1, h2, h3 {
 		.container {
 			.additional2header {
 				padding-top: 25px;
+				h1 {
+					font-size: 26px;
+				}
 			
 				p {
 					padding: 0 25px 25px 25px;
+				}
+			}
+		}
+	}
+
+	.modal-dialog {
+		padding-top: 40%;
+		.modal-content {
+			.modalbg {
+				width: 400px;
+				height: 340px;
+				.modalimg {
+					top: 10%;
+					position: absolute;
+					margin-top: -150px;
+
+					img {
+						width: 80%;
+						height: 80%;
+					}
+				}
+
+				.modaltxt {
+					padding-top: 175px;
+					h1 {
+						font-size: 28px;
+						padding-bottom: 0;
+					}	
+
+					p {
+						font-size: 16px;
+						display: flex;
+						align-self: center;
+						padding-bottom: 10px;
+						padding-top: 0;
+					}
+
+					.modalbtn {
+						width: 175px;
+						height: 40px;
+						border-radius: 2%;
+						font-size: 18px;
+						color: #FFF;
+						background-color: $lightred;
+						border: none;
+						align-self: center;
+					}
 				}
 			}
 		}
@@ -1423,11 +1591,16 @@ h1, h2, h3 {
 		.footercontainer {
 			padding-bottom: 45px;
 			padding-top: 45px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			.footerdivleft {
 				justify-content: center;
 			}
 			.footerdivright {
 				justify-content: center;
+				
 			}
 		}
 	}	
