@@ -288,6 +288,7 @@ h1, h2, h3 {
 	position: relative;
 	width: 100%;
 
+
 }
 
 .carousel-content {
@@ -295,26 +296,29 @@ h1, h2, h3 {
     align-items: center;
     text-align: center;
     flex-direction: column;
-
-
-	.quote {
-		font-size: 75px;
-    	color: $corepink;
-	}
-
-	.quote1 {
-		@extend .quote;
-		transform: rotate(180deg);
-	}
-
-	.quote2 {
-		@extend .quote;
-		
-	}
+	
 
     .quotetxt {
 		color: #FFF;
     	font-size: 25px;
+		padding: 50px;
+		&:before, &:after {
+			font-size: 75px;
+		    color: $corepink;
+			z-index: 999;	
+			content: '„';
+			position: absolute;
+		}
+
+		&:before {
+			left: 50%;
+			top: -15%;
+		}
+
+		&:after {
+			left: 50%;
+			bottom: 10%;				
+		}
 
     }
 
@@ -559,51 +563,34 @@ h1, h2, h3 {
 			.newsimgboxgallery {
 				position: relative;
 				overflow: hidden;
-
-				&:after {
-    				content: '';
-    				width: 0;
-					height: 0;
-    				left: 50%;
-    				bottom: 0;					
-					border-style: solid;
-					border-width: 25px 0 0 360px;
-					border-color: transparent transparent transparent $corepink;
-				    position: absolute;
-				    transform: translatex(-50%);
-				}
-
+	
 				&:hover {
-					&:after {
-						opacity: 0;
-					}
-
 					.layer {
-						margin-bottom: 0;
-						cursor: pointer;
-						opacity: 0.9;
+						margin-top: 0;
+						background-color: $corepink;
+						opacity: 0.8;
 					}
-				}
+				}			
 
 				.layer {
-					width: 360px;
-					height: 300px;
-					position:absolute;
-					bottom: 0;
-					left: 0;
-					margin-bottom: -300px;
 					background-color: $corepink;
-					transition: all 0.6s ease;
-					display: flex;
-					justify-content: center;
-					align-items: center;
+					width: 250%;
+    				height: 130%;
+					left: -20px;
+				    top: 0;
+				    margin-top: 245px;
+				    transition: .4s ease-in;
+				    position: absolute;
+					transform: rotate(2deg);
 
-						.fa {
-							margin-top: 50px;
-							font-size: 50px;
-							color: #corepink;
+					.fa {
+						font-size: 48px;
+						color: #FFF;
+						position: absolute;
+						left: 20%;
+						top: 30%;
+					}
 
-							}
 				}
 			}
 		}
